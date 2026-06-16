@@ -1,0 +1,423 @@
+/* ── Page ─────────────────────────────────────────────────────────────────── */
+.page {
+    background: linear-gradient(135deg, #f0f7ee 0%, #e8f5e2 50%, #f5f9f0 100%);
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 0;
+    margin: 0;
+  }
+  
+  /* ── Header ───────────────────────────────────────────────────────────────── */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .plantName {
+    font-size: 13px;
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .headerIcon { font-size: 2.5rem; }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a3c2a;
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #5a7a6a;
+    margin: 0.2rem 0 0;
+    font-size: 0.95rem;
+  }
+  
+  /* ── Layout ───────────────────────────────────────────────────────────────── */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+  
+  /* ── Upload Panel ─────────────────────────────────────────────────────────── */
+  .uploadPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .dropzone {
+    border: 2.5px dashed #7ab890;
+    border-radius: 16px;
+    background: #fff;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .dropzone:hover { border-color: #3d8f5f; background: #f5fbf7; }
+  
+  .dragging {
+    border-color: #2d7a50;
+    background: #eafaf1;
+    transform: scale(1.01);
+  }
+  
+  .hasImage { cursor: default; border-style: solid; border-color: #3d8f5f; }
+  
+  .dropContent {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .dropIcon { font-size: 3rem; margin-bottom: 0.75rem; }
+  .dropText { font-size: 1rem; font-weight: 600; color: #2d4a3a; margin: 0 0 0.3rem; }
+  .dropSub  { color: #7ab890; font-size: 0.9rem; margin: 0 0 0.75rem; }
+  .dropHint { font-size: 0.78rem; color: #aaa; margin: 0; }
+  
+  /* ── Preview ──────────────────────────────────────────────────────────────── */
+  .previewWrapper {
+    width: 100%;
+    height: 280px;
+    position: relative;
+  }
+  
+  .previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .previewOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .previewWrapper:hover .previewOverlay { opacity: 1; }
+  
+  .changeBtn {
+    background: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  /* ── Buttons ──────────────────────────────────────────────────────────────── */
+  .btnRow {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .detectBtn {
+    flex: 1;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, #2d8f5f, #3daf77);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  
+  .detectBtn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+  .detectBtn:disabled { opacity: 0.55; cursor: not-allowed; }
+  
+  .resetBtn {
+    padding: 0.85rem 1.2rem;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #888;
+    transition: all 0.2s;
+  }
+  
+  .resetBtn:hover { border-color: #e74c3c; color: #e74c3c; }
+  
+  /* ── Spinner ──────────────────────────────────────────────────────────────── */
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2.5px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin { to { transform: rotate(360deg); } }
+  
+  /* ── Error ────────────────────────────────────────────────────────────────── */
+  .errorBox {
+    background: #fdecea;
+    border: 1px solid #f5c6cb;
+    color: #c0392b;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* ── Results Panel ────────────────────────────────────────────────────────── */
+  .resultsPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .resultsTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a3c2a;
+    margin: 0 0 0.5rem;
+  }
+  
+  /* ── Empty / Loading States ───────────────────────────────────────────────── */
+  .emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    background: #fff;
+    border-radius: 16px;
+    color: #888;
+    text-align: center;
+    padding: 2rem;
+    gap: 0.75rem;
+  }
+  
+  .emptyIcon { font-size: 3rem; }
+  
+  .loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    background: #fff;
+    border-radius: 16px;
+    gap: 1rem;
+    color: #3d8f5f;
+  }
+  
+  .loadingState p { font-weight: 600; margin: 0; font-size: 1rem; }
+  .loadingState span { font-size: 0.85rem; color: #aaa; }
+  
+  .pulseRing {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #3d8f5f;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%       { transform: scale(1.15); opacity: 0.5; }
+  }
+  
+  /* ── Prediction Cards ─────────────────────────────────────────────────────── */
+  .predictionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .predCard {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    border: 1.5px solid #e8f0eb;
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+  
+  .predCard:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  
+  .topCard {
+    border-color: #3d8f5f;
+    box-shadow: 0 4px 20px rgba(61,143,95,0.15);
+  }
+  
+  .topBadge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: linear-gradient(135deg, #2d8f5f, #3daf77);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+  }
+  
+  .predHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  
+  .diseaseName {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a3c2a;
+    margin: 0 0 0.2rem;
+  }
+  
+  .confidenceLabel {
+    font-size: 0.82rem;
+    color: #777;
+  }
+  
+  .confidenceCircle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  
+  /* ── Confidence Bar ───────────────────────────────────────────────────────── */
+  .barTrack {
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+  }
+  
+  .barFill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+  }
+  
+  /* ── Toggle Button ────────────────────────────────────────────────────────── */
+  .toggleBtn {
+    background: none;
+    border: 1.5px solid #d0e8d8;
+    border-radius: 8px;
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem;
+    color: #3d8f5f;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  
+  .toggleBtn:hover { background: #eafaf1; border-color: #3d8f5f; }
+  
+  /* ── Info Grid ────────────────────────────────────────────────────────────── */
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+  }
+  
+  @media (max-width: 500px) {
+    .infoGrid { grid-template-columns: 1fr; }
+  }
+  
+  .infoCard {
+    background: #f7fbf8;
+    border-radius: 10px;
+    padding: 0.85rem;
+    border: 1px solid #e0ede5;
+  }
+  
+  .infoCard h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2d6a4f;
+    margin: 0 0 0.4rem;
+  }
+  
+  .infoCard p {
+    font-size: 0.82rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .plantBanner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border: 1px solid #27ae60;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+  }
+  
+  .plantBannerIcon {
+    font-size: 28px;
+  }
+  
+  .plantBannerTitle {
+    font-size: 11px;
+    color: #2e7d32;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  
+  .plantBannerName {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1b5e20;
+    margin: 0;
+  }
+  
+  .plantBannerConfidence {
+    margin-left: auto;
+    background: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+  }

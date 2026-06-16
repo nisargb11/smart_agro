@@ -1,0 +1,14 @@
+{
+    "detect": "🔍 Detect Disease",
+    "upload": "Upload Image",
+    "reset": "❌Reset",
+    "title": "Plant Disease Detection",
+    "Upload image":"📷 Upload a leaf image to identify diseases instantly",
+    "result1":"Upload a leaf image and click ",
+    "result2":"Detect Disease ",
+    "result3":"to see results",
+    "analyze":"Analyzing leaf pattern...",
+    "buffer":"This may take a few seconds",
+    "treat":"💊 Treatment",
+    "prevent":"🛡️ Prevention"
+  }
