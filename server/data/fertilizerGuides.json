@@ -1,0 +1,127 @@
+{
+    "nitrogen": {
+      "low": {
+        "status": "Deficient",
+        "severity": "warning",
+        "symptoms": "Yellowing of older leaves, stunted growth, pale green color",
+        "fertilizers": ["Urea (46% N)", "Ammonium Sulphate (21% N)", "Ammonium Nitrate (34% N)"],
+        "organic": ["Farmyard Manure (FYM)", "Compost", "Green Manure", "Neem Cake"],
+        "dosage": "Apply Urea @ 100–120 kg/ha or FYM @ 10–15 tonnes/ha",
+        "timing": "Apply in 2–3 splits — at sowing, knee-high, and flowering stage",
+        "tip": "Avoid applying excess nitrogen as it promotes vegetative growth at expense of yield"
+      },
+      "optimal": {
+        "status": "Optimal",
+        "severity": "success",
+        "symptoms": "Plants show healthy green color and normal growth",
+        "fertilizers": ["Maintain with Urea or Ammonium Sulphate as per crop need"],
+        "organic": ["Compost", "FYM"],
+        "dosage": "Maintain current levels. Apply recommended dose for specific crop",
+        "timing": "Split application during crop growth stages",
+        "tip": "Monitor regularly and adjust based on crop response and leaf color"
+      },
+      "high": {
+        "status": "Excess",
+        "severity": "danger",
+        "symptoms": "Dark green leaves, excessive vegetative growth, delayed maturity, lodging",
+        "fertilizers": ["Avoid nitrogen fertilizers temporarily"],
+        "organic": ["Avoid high-nitrogen manures like poultry manure"],
+        "dosage": "Skip nitrogen application for next 1–2 seasons",
+        "timing": "Resume only after soil test confirms normal levels",
+        "tip": "Excess nitrogen increases pest and disease susceptibility. Improve drainage to leach excess."
+      }
+    },
+    "phosphorous": {
+      "low": {
+        "status": "Deficient",
+        "severity": "warning",
+        "symptoms": "Purple or reddish discoloration of leaves, poor root development, delayed maturity",
+        "fertilizers": ["Single Super Phosphate (16% P2O5)", "Triple Super Phosphate (46% P2O5)", "DAP (46% P2O5)"],
+        "organic": ["Bone Meal", "Rock Phosphate", "Compost"],
+        "dosage": "Apply SSP @ 375 kg/ha or DAP @ 100 kg/ha",
+        "timing": "Apply entire dose as basal before sowing — phosphorus is immobile in soil",
+        "tip": "Apply near root zone for better uptake. Mycorrhizal inoculants improve phosphorus absorption."
+      },
+      "optimal": {
+        "status": "Optimal",
+        "severity": "success",
+        "symptoms": "Good root development, healthy flowering and fruiting",
+        "fertilizers": ["Maintain with SSP or DAP as per crop requirement"],
+        "organic": ["Compost", "Bone Meal"],
+        "dosage": "Apply as per crop-specific recommended dose",
+        "timing": "Basal application before sowing",
+        "tip": "Phosphorus availability decreases in very acidic or alkaline soils. Maintain pH 6–7 for best uptake."
+      },
+      "high": {
+        "status": "Excess",
+        "severity": "danger",
+        "symptoms": "Induced zinc and iron deficiency, reduced micronutrient availability",
+        "fertilizers": ["Avoid phosphatic fertilizers"],
+        "organic": ["Avoid bone meal and rock phosphate"],
+        "dosage": "Skip phosphorus application for 1–2 seasons",
+        "timing": "Resume after soil test shows normal levels",
+        "tip": "Excess phosphorus locks out zinc and iron. Apply zinc sulphate to correct induced micronutrient deficiency."
+      }
+    },
+    "potassium": {
+      "low": {
+        "status": "Deficient",
+        "severity": "warning",
+        "symptoms": "Scorching or burning of leaf tips and margins, weak stems, poor fruit quality",
+        "fertilizers": ["Muriate of Potash (60% K2O)", "Sulphate of Potash (50% K2O)", "NPK complex fertilizers"],
+        "organic": ["Wood Ash", "Compost", "Banana peel compost"],
+        "dosage": "Apply MOP @ 80–100 kg/ha",
+        "timing": "Split application — half at sowing, half at flowering",
+        "tip": "Potassium improves drought tolerance, disease resistance, and fruit quality. Do not skip for fruit crops."
+      },
+      "optimal": {
+        "status": "Optimal",
+        "severity": "success",
+        "symptoms": "Strong stems, good fruit size, disease-resistant plants",
+        "fertilizers": ["Maintain with MOP or SOP as per crop requirement"],
+        "organic": ["Wood Ash", "Compost"],
+        "dosage": "Apply recommended dose for specific crop",
+        "timing": "Split application recommended",
+        "tip": "Potassium requirement increases at fruiting stage. Increase dose slightly for fruit crops."
+      },
+      "high": {
+        "status": "Excess",
+        "severity": "danger",
+        "symptoms": "Induced magnesium and calcium deficiency, salt stress in sensitive crops",
+        "fertilizers": ["Avoid potassium fertilizers"],
+        "organic": ["Avoid wood ash"],
+        "dosage": "Skip potassium application for 1–2 seasons",
+        "timing": "Resume after soil test confirms reduction",
+        "tip": "Flush soil with excess irrigation to reduce potassium buildup. Monitor calcium and magnesium levels."
+      }
+    },
+    "ph": {
+      "acidic": {
+        "status": "Too Acidic",
+        "severity": "warning",
+        "symptoms": "Aluminum and manganese toxicity, poor nutrient availability, reduced microbial activity",
+        "amendments": ["Agricultural Lime (CaCO3)", "Dolomite Lime (CaMg(CO3)2)", "Wood Ash"],
+        "dosage": "Apply lime @ 2–4 tonnes/ha depending on soil texture and target pH",
+        "timing": "Apply 2–4 weeks before sowing to allow reaction with soil",
+        "tip": "Dolomite lime also supplies magnesium. Re-test soil pH after 3 months. Avoid over-liming."
+      },
+      "optimal": {
+        "status": "Optimal",
+        "severity": "success",
+        "symptoms": "All nutrients are most available, good microbial activity",
+        "amendments": ["Maintain with organic matter additions"],
+        "dosage": "No amendment needed. Maintain with compost",
+        "timing": "Regular organic matter addition keeps pH stable",
+        "tip": "Maintain pH 6–7 for most crops. Regular compost addition buffers pH naturally."
+      },
+      "alkaline": {
+        "status": "Too Alkaline",
+        "severity": "danger",
+        "symptoms": "Iron, zinc, manganese deficiency, poor nutrient uptake, chlorosis",
+        "amendments": ["Elemental Sulphur", "Gypsum (CaSO4)", "Acidifying fertilizers like Ammonium Sulphate"],
+        "dosage": "Apply elemental sulphur @ 500–1000 kg/ha or gypsum @ 2–3 tonnes/ha",
+        "timing": "Apply several weeks before sowing",
+        "tip": "Foliar spray of iron and zinc sulphate corrects immediate deficiency symptoms while soil amendment takes effect."
+      }
+    }
+  }

@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import Enquiry from "./pages/Enquiry.jsx";
+import FertilizerRecommendation from "./pages/FertilizerRecommendation.jsx";
 import "./i18n.js";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/recommend" element={<CropRecommendation />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/disease" element={<DiseaseDetection />} />
+          <Route path="/fertilizer" element={<FertilizerRecommendation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

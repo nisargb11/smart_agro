@@ -10,6 +10,7 @@ import weatherRoute from "./routes/weather.js";
 import recommendRoute from "./routes/recommend.js";
 import diseaseRoute from "./routes/disease.js";
 import cropGuideRouter from "./routes/cropguide.js";
+import fertilizerRouter from "./routes/fertilizer.js";
 
 dotenv.config();
 
@@ -112,5 +113,6 @@ app.use("/weather", weatherRoute);
 app.use("/api/recommend", recommendRoute);
 app.use("/api/disease", diseaseRoute);
 app.use("/api/cropguide", cropGuideRouter);
+app.use("/api/fertilizer", fertilizerRouter);
 
 startServer();
