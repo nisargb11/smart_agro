@@ -13,6 +13,8 @@ import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import Enquiry from "./pages/Enquiry.jsx";
 import FertilizerRecommendation from "./pages/FertilizerRecommendation.jsx";
+import GovernmentSchemes from "./pages/GovernmentSchemes.jsx";
+import ProfitCropSelection from "./pages/ProfitCropSelection.jsx";
 import "./i18n.js";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/weather" element={<Weather />} />
           <Route path="/disease" element={<DiseaseDetection />} />
           <Route path="/fertilizer" element={<FertilizerRecommendation />} />
+          <Route path="/schemes" element={<GovernmentSchemes />} />
+          <Route path="/profit" element={<ProfitCropSelection />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

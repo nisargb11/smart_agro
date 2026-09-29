@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Menu, Video, Map, Cloud, Microscope,FlaskConical} from "lucide-react";
+import { Leaf, Menu, Video, Map, Cloud, Microscope,FlaskConical,Landmark,TrendingUp} from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import i18n from "i18next";
@@ -15,8 +15,10 @@ const Header = () => {
     { name: "Video Tutorials", href: "/tutorials", icon: Video },
     { name: "Crop Recommendation", href: "/recommend", icon: Map },
     { name: "Fertilizer Guide", href:"/fertilizer",icon:FlaskConical},
+    { name: "Gov Schemes", href: "/schemes", icon: Landmark },
     //{ name: "Weather", href: "/weather", icon: Cloud },
     { name: "Disease Detection", href: "/disease", icon:Microscope},
+    { name: "Profit Analysis", href: "/profit", icon: TrendingUp },
   ];
 
   return (

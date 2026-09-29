@@ -11,6 +11,8 @@ import recommendRoute from "./routes/recommend.js";
 import diseaseRoute from "./routes/disease.js";
 import cropGuideRouter from "./routes/cropguide.js";
 import fertilizerRouter from "./routes/fertilizer.js";
+import schemesRouter from "./routes/schemes.js";
+import profitRouter from "./routes/profit.js";
 
 dotenv.config();
 
@@ -114,5 +116,7 @@ app.use("/api/recommend", recommendRoute);
 app.use("/api/disease", diseaseRoute);
 app.use("/api/cropguide", cropGuideRouter);
 app.use("/api/fertilizer", fertilizerRouter);
+app.use("/api/schemes", schemesRouter);
+app.use("/api/profit", profitRouter);
 
 startServer();
